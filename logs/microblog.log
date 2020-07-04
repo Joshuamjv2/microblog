@@ -1,0 +1,89 @@
+2020-06-28 00:09:16,310 INFO: Microblog startup [in C:\Users\DELL E7240\Desktop\microblog.2\app\__init__.py:74]
+2020-06-30 21:25:44,364 INFO: Microblog startup [in C:\Users\DELL E7240\Desktop\microblog.2\app\__init__.py:74]
+2020-07-02 05:37:54,443 INFO: Microblog startup [in C:\Users\DELL E7240\Desktop\microblog.2\app\__init__.py:74]
+2020-07-02 05:41:20,619 INFO: Microblog startup [in C:\Users\DELL E7240\Desktop\microblog.2\app\__init__.py:74]
+2020-07-02 05:50:41,892 INFO: Microblog startup [in C:\Users\DELL E7240\Desktop\microblog.2\app\__init__.py:74]
+2020-07-02 05:53:04,438 INFO: Microblog startup [in C:\Users\DELL E7240\Desktop\microblog.2\app\__init__.py:74]
+2020-07-02 06:45:43,851 INFO: Microblog startup [in C:\Users\DELL E7240\Desktop\microblog.2\app\__init__.py:74]
+2020-07-02 07:39:36,385 INFO: Microblog startup [in C:\Users\DELL E7240\Desktop\microblog.2\app\__init__.py:78]
+2020-07-02 07:45:21,657 INFO: Microblog startup [in C:\Users\DELL E7240\Desktop\microblog.2\app\__init__.py:78]
+2020-07-02 08:15:10,243 INFO: Microblog startup [in C:\Users\DELL E7240\Desktop\microblog.2\app\__init__.py:78]
+2020-07-02 08:25:05,647 INFO: Microblog startup [in C:\Users\DELL E7240\Desktop\microblog.2\app\__init__.py:78]
+2020-07-02 08:30:12,333 INFO: Microblog startup [in C:\Users\DELL E7240\Desktop\microblog.2\app\__init__.py:78]
+2020-07-02 08:44:37,289 INFO: Microblog startup [in C:\Users\DELL E7240\Desktop\microblog.2\app\__init__.py:78]
+2020-07-03 23:04:18,332 INFO: Microblog startup [in C:\Users\DELL E7240\Desktop\microblog.2\app\__init__.py:78]
+2020-07-04 08:56:17,998 INFO: Microblog startup [in C:\Users\DELL E7240\Desktop\microblog.2\app\__init__.py:78]
+2020-07-04 09:00:20,759 INFO: Microblog startup [in C:\Users\DELL E7240\Desktop\microblog.2\app\__init__.py:78]
+2020-07-04 09:00:58,951 INFO: Microblog startup [in C:\Users\DELL E7240\Desktop\microblog.2\app\__init__.py:78]
+2020-07-04 09:08:59,653 INFO: Microblog startup [in C:\Users\DELL E7240\Desktop\microblog.2\app\__init__.py:78]
+2020-07-04 09:09:08,817 ERROR: Exception on /search [GET] [in c:\users\dell e7240\desktop\microblog.2\env\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\dell e7240\desktop\microblog.2\env\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\dell e7240\desktop\microblog.2\env\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\dell e7240\desktop\microblog.2\env\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\dell e7240\desktop\microblog.2\env\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\dell e7240\desktop\microblog.2\env\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\dell e7240\desktop\microblog.2\env\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\dell e7240\desktop\microblog.2\env\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\DELL E7240\Desktop\microblog.2\app\main\routes.py", line 20, in search
+    posts, total = Post.search(g.search_form.q.data, page,
+  File "C:\Users\DELL E7240\Desktop\microblog.2\app\models.py", line 15, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "C:\Users\DELL E7240\Desktop\microblog.2\app\search.py", line 19, in query_index
+    search = current_app.elasticsearch.search(
+  File "c:\users\dell e7240\desktop\microblog.2\env\lib\site-packages\elasticsearch\client\utils.py", line 139, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "c:\users\dell e7240\desktop\microblog.2\env\lib\site-packages\elasticsearch\client\__init__.py", line 1479, in search
+    return self.transport.perform_request(
+  File "c:\users\dell e7240\desktop\microblog.2\env\lib\site-packages\elasticsearch\transport.py", line 345, in perform_request
+    status, headers_response, data = connection.perform_request(
+  File "c:\users\dell e7240\desktop\microblog.2\env\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 256, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "c:\users\dell e7240\desktop\microblog.2\env\lib\site-packages\elasticsearch\connection\base.py", line 287, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(
+elasticsearch.exceptions.NotFoundError: NotFoundError(404, 'index_not_found_exception', 'no such index [post]', post, index_or_alias)
+2020-07-04 09:09:09,059 ERROR: Exception on /search [GET] [in c:\users\dell e7240\desktop\microblog.2\env\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\dell e7240\desktop\microblog.2\env\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\dell e7240\desktop\microblog.2\env\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\dell e7240\desktop\microblog.2\env\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\dell e7240\desktop\microblog.2\env\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\dell e7240\desktop\microblog.2\env\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\dell e7240\desktop\microblog.2\env\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\dell e7240\desktop\microblog.2\env\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\DELL E7240\Desktop\microblog.2\app\main\routes.py", line 20, in search
+    posts, total = Post.search(g.search_form.q.data, page,
+  File "C:\Users\DELL E7240\Desktop\microblog.2\app\models.py", line 15, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "C:\Users\DELL E7240\Desktop\microblog.2\app\search.py", line 19, in query_index
+    search = current_app.elasticsearch.search(
+  File "c:\users\dell e7240\desktop\microblog.2\env\lib\site-packages\elasticsearch\client\utils.py", line 139, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "c:\users\dell e7240\desktop\microblog.2\env\lib\site-packages\elasticsearch\client\__init__.py", line 1479, in search
+    return self.transport.perform_request(
+  File "c:\users\dell e7240\desktop\microblog.2\env\lib\site-packages\elasticsearch\transport.py", line 345, in perform_request
+    status, headers_response, data = connection.perform_request(
+  File "c:\users\dell e7240\desktop\microblog.2\env\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 256, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "c:\users\dell e7240\desktop\microblog.2\env\lib\site-packages\elasticsearch\connection\base.py", line 287, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(
+elasticsearch.exceptions.NotFoundError: NotFoundError(404, 'index_not_found_exception', 'no such index [post]', post, index_or_alias)
+2020-07-04 09:16:32,697 INFO: Microblog startup [in C:\Users\DELL E7240\Desktop\microblog.2\app\__init__.py:78]
+2020-07-04 09:24:27,523 INFO: Microblog startup [in C:\Users\DELL E7240\Desktop\microblog.2\app\__init__.py:78]
+2020-07-04 09:44:52,405 INFO: Microblog startup [in C:\Users\DELL E7240\Desktop\microblog.2\app\__init__.py:78]
+2020-07-04 11:42:56,693 INFO: Microblog startup [in C:\Users\DELL E7240\Desktop\microblog.2\app\__init__.py:78]
+2020-07-04 15:15:00,275 INFO: Microblog startup [in C:\Users\DELL E7240\Desktop\movies and series\microblog.2\app\__init__.py:78]
